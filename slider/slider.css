@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'iransans';
+    src: url(font/iransans/IRANSansWeb.eot);
+    src: url(font/iransans/IRANSansWeb.ttf);
+    src: url(font/iransans/IRANSansWeb.woff);
+    src: url(font/iransans/IRANSansWeb.woff2);
+}
+
+@font-face {
+    font-family: 'iransansmedium';
+    src: url(font/iransansmedium/IRANSansWeb_Medium.eot);
+    src: url(font/iransansmedium/IRANSansWeb_Medium.ttf);
+    src: url(font/iransansmedium/IRANSansWeb_Medium.woff);
+    src: url(font/iransansmedium/IRANSansWeb_Medium.woff2);
+}
+
+a {
+    text-decoration: none;
+}
+    
+    /*NEW  SWIPER  */
+    
+    .slider-parent{
+    height: 700px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        direction: ltr;
+        margin: 0 0 2em;
+    }
+    
+    
+    .swiper-slide-container {
+      text-align: center;
+      font-size: 18px;
+      height: 100%;
+      margin: auto;
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+    
+    .gallery-top {
+    width: 60%;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+    }
+    
+    .gallery-thumbs {
+      width: 40%;
+      overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        border-right: 1px solid #c2c2c238;
+        cursor: pointer;
+    }
+    
+    .gallery-thumbs-bg{
+        background: url(img/بگکراند-محصول-اسلایدر-.webp) no-repeat;
+        background-size: 80% 75%;
+        background-position: 50% 30%;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .gallery-content, .hideForDesktop{
+        width: 21em;
+        height: 250px;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: 1;
+        border: 1px solid #7e57ff4d;
+        margin-bottom: 0px;
+        box-shadow: 0 0 5px 1px rgb(140 140 140 / 55%);
+        border-radius: 2px !important;
+        overflow: hidden;
+        box-sizing: content-box;
+    }
+    
+    .swiper-slide-container-content{
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 15px;
+    }
+    
+    .swiper-button-wrapper{
+        width: 100%;
+        height: 3em;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    
+    .swiper-button-next::after, .swiper-button-prev::after{
+        display: none;
+    }
+    
+    .swiper-button-next::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 2.5em;
+        height: 2.5em;
+        background: url(http://riracodemo.ir/wp-content/uploads/2021/12/arrow.svg) no-repeat;
+        background-size: contain;
+        transform: rotate(180deg);
+    }
+    
+    .swiper-button-prev::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 2.5em;
+        height: 2.5em;
+        background: url(http://riracodemo.ir/wp-content/uploads/2021/12/arrow.svg) no-repeat;
+        background-size: contain;
+    }
+    
+    .slider-parent .swiper-button-next, .slider-parent .swiper-button-prev{
+        border: 1px solid #7e57ff57;
+        width: 50%;
+        bottom: 0px;
+        border-radius: 1px;
+        background: white;
+    }
+    
+    .swiper-slide-container-content .title{
+    width: 100%;
+        margin: 0 0 10px;
+        font-size: 1.25em;
+        font-family: 'iransansmedium';
+        color: #282729;
+        text-align: right;
+        letter-spacing: -.45px;
+        font-weight: unset;
+        display: block;
+    }
+    
+    .swiper-slide-container-content{
+      color: #3e3d3d;
+        text-align: right;
+        font-size: 15px;
+        font-family: 'iransans';
+        font-weight: unset;
+    }
+    
+    .swiper-slide-container img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+    
+    .swiper-slide-container-product img{
+        width: 50%;
+        height: 40%;
+    }
+    
+    .swiper-slide-container-product_1{
+      margin-top: 10em;
+    }
+    
+    .swiper-slide-container-product_2{
+      margin-top: 12em;
+    }
+    
+    .view-product{
+        border: 1px solid #7E57FF;
+        padding: 0.7em 1.5em;
+        display: block;
+        text-align: center;
+        border-radius: 5em;
+        color: #7E57FF;
+        font-family: 'iransansmedium';
+        font-size: 1.2em;
+        width: fit-content;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+        transition: 0.3s;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    }
+    
+    .view-product:hover{
+          transform: translateY(-5px);
+    }
+    
+    .swiper-slide-container-product_2 img{
+        transform: scale(1.5);
+        height: 300px;
+        margin-bottom: 3em;
+    }
+    
+    .swiper-slide-container-product_1 img{
+        height: 400px;
+    }
+    
+    .swiper-button-wrapper .swiper-button-next{
+        right: 0%;
+        height: 100%;
+    }
+    
+    .swiper-button-wrapper .swiper-button-prev{
+    left: 0%;
+        height: 100%;
+    }
+    
+    /* NEW SWIPER */
+    
+    @media only screen and (min-width: 990px) {
+      .hideForDesktop{
+        display: none;
+      }
+    
+    }
+    
+    @media only screen and (max-width: 1600px){
+    
+    .slider-parent{
+        height: 600px;
+    }
+    
+    .swiper-slide-container-product_2 {
+        margin-top: 10em;
+    }
+    
+    .swiper-slide-container-product_1 {
+        margin-top: 7em;
+    }
+    }
+    
+    @media only screen and (max-width: 1500px){
+    
+    .slider-parent{
+        height: 600px;
+    }
+    
+    .swiper-slide-container-product_2 {
+        margin-top: 10em;
+    }
+    
+    .swiper-slide-container-product_1 {
+        margin-top: 7em;
+    }
+    
+    }
+    
+    
+    @media only screen and (max-width: 989px) {
+    
+    .view-product{
+        padding: 0.5em 1.5em;
+    }
+    
+    .swiper-slide-container-product_2 img{
+        margin-bottom: 0;
+    }
+    
+    .gallery-thumbs-bg{
+        background-size: 60% 80%;
+        background-position: top;
+        margin-bottom: 1rem;
+    }
+    
+    .swiper-slide-container-product_1, .swiper-slide-container-product_2{
+        margin-top: 0;
+    }
+    
+    .swiper-slide-container-product_1 img, .swiper-slide-container-product_2 img{
+        width: 40%;
+        height: 350px;
+        transform: scale(0.8);
+    }
+    
+    .hideForDesktop{
+        position: relative;
+            width: 70%;
+    }
+    
+    .gallery-top{
+        display: none;
+    }
+    
+    .gallery-thumbs{
+      width: 100%;
+    }
+    
+    .slider-parent{
+        justify-content: center;
+        flex-wrap: wrap;
+        height: auto;
+    }
+    
+    }
+    
+    @media only screen and (max-width: 860px){
+    
+     .slider-parent{
+        border: unset;
+    }
+    .wrapslid{
+    width: 100%;
+    }
+    
+    }
+    
+    @media only screen and (max-width: 620px) {
+    
+    .swiper-slide-container-content p{
+        font-size: 0.9em;
+    }
+    
+    .gallery-thumbs-bg{
+        background-size: 60% 80%;
+    }
+    
+    .swiper-slide-container-product_1 img, .swiper-slide-container-product_2 img{
+           width: 45%;
+           height: 300px;
+           margin-bottom: 0;
+    }
+    
+    .hideForDesktop {
+        width: 90%;
+        right: 0%;
+        margin: auto;
+    
+    }
+    
+    .swiper-slide-container-content h3{
+         margin: 0;
+    }
+    
+    }
